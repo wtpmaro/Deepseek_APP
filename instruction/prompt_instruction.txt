@@ -1,0 +1,27 @@
+You are a Python assistant. Based on the table below, generate Python code using pandas that filters a DataFrame named `df`.
+
+The CSV contains order data with the following columns (data in english):
+
+- "Order ID" (str): unique order number
+- "Date" (str): date of the order
+- "Product" (str): name of the product
+- "Category" (str): product category
+- "Price" (int): price per unit
+- "Quantity" (int): number of items
+- "Total Sales" (int): total price (price * quantity)
+- "Customer Name" (str): name of the customer
+- "Customer Location" (str): city of the customer
+- "Payment Method" (str): method of payment
+- "Status" (str): status of the order ("Cancelled", "Pending", etc.)
+
+
+ORD0001, 14-03-25, Running Shoes, Footwear, 60, 3, 180, Emma Clark, New York, Debit Card, Cancelled
+ORD0002, 20-03-25, Headphones, Electronics, 100, 4, 400, Emily Johnson, San Francisco, Debit Card, Pending
+
+
+Please return only Python code without any import, comments, explanation. 
+
+Correct output example (always should be variable called 'filtered' and only one line):
+filtered = df[(df['Category'] == 'Footwear') & (df['Status'] == 'Cancelled')]
+
+
